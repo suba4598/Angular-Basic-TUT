@@ -1,0 +1,66 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Panel</mat-toolbar>
+    <mat-nav-list>
+      <div  class="toolbar" id="toolbar" tabindex="0">
+        
+      </div>
+      <a mat-list-item routerLink="/workspace">Workspace</a>
+      <a mat-list-item href="#">Sticky</a>
+      <a mat-list-item href="#">Reminder</a>
+      <br>
+      <br>
+      <br>
+      <div class="KB">
+        <img src="assets/KB.png">
+      </div>
+      
+         
+    </mat-nav-list>
+    <div class="Rights">
+      <p>© 2022 Knowledge Bucket</p>
+      <p>All rights reserved.</p>
+        
+      </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Knowledge Bucket</span>
+    </mat-toolbar>
+
+    <nav class="navbar">
+     
+      
+     
+      <ul class="nav-links">
+         <div class="menu">
+          <li><a  routerLink="/home">Home</a></li>
+          <li><a  routerLink="/about">About</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+          <li><a routerLink="/pro">Pro</a></li>
+          <li><a routerLink="/application">Application</a></li>
+       </div>
+      </ul>
+    </nav>
+   
+  <Br>
+ 
+   
+      <router-outlet></router-outlet> 
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
