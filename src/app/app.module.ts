@@ -18,6 +18,10 @@ import { ContactComponent } from './contact/contact.component';
 import { ProComponent } from './pro/pro.component';
 import { ApplicationComponent } from './application/application.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+import { NoteComponent } from './note/note.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { WorkspaceComponent } from './workspace/workspace.component';
     ContactComponent,
     ProComponent,
     ApplicationComponent,
-    WorkspaceComponent
+    WorkspaceComponent,
+    NoteComponent,
+   
+    
+    
   ],
   imports: [
     BrowserModule,
