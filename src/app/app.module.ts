@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import{ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,8 @@ import { ProComponent } from './pro/pro.component';
 import { ApplicationComponent } from './application/application.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { NoteComponent } from './note/note.component';
+import { RegisterComponent } from './register/register.component';
+
 
 
 
@@ -34,7 +38,8 @@ import { NoteComponent } from './note/note.component';
     ApplicationComponent,
     WorkspaceComponent,
     NoteComponent,
-   
+    RegisterComponent,
+    
     
     
   ],
@@ -48,7 +53,9 @@ import { NoteComponent } from './note/note.component';
     MatSidenavModule,
     MatIconModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

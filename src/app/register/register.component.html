@@ -1,0 +1,23 @@
+<div class="main">
+    <p class="sign" align="center">Create your own Account</p>
+    <form [formGroup]="NewRegisterForm" (ngSubmit)="OnRegisterClick(NewRegisterForm.value)" class="form1">
+
+        <input type="text" name ="Email"  align="center" placeholder="Email" formControlName = "Email" class="un "><br>
+        <p align="center" style="color:red" *ngIf=" IsClicked && Check.Email.errors">Invalid Email</p><br>
+
+        <input type="text" name ="MobileNo"  align="center" placeholder="Mobile No" formControlName = "MobileNo" class="un "><br>
+        <p align="center" style="color:red" *ngIf=" IsClicked && Check.MobileNo.errors">Invalid Mobile No</p><br>
+
+      <input type="text" name ="username"  align="center" placeholder="Username" formControlName = "username" class="un "><br>
+      <p align="center" style="color:red" *ngIf=" IsClicked && Check.username.errors">Username must have min 8 charcters</p><br>
+     
+      
+      <input class="pass" name ="password" type="password" align="center" placeholder="Password" formControlName = "password">
+      <p align="center" style="color:red" *ngIf=" IsClicked && Check.password.errors">Password must contain atleast one special charcter,number and uppercap</p><br>
+     
+      
+      <input type="submit" class="submit" value="Register"><br>
+
+      
+      </form>
+  </div>
