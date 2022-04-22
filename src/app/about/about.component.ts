@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {DomSanitizer} from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-about',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  Reference;
 
-  constructor() { }
+  constructor(private http:HttpClient,
+    private sanitizer:DomSanitizer) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.http.get('https://drive.google.com/file/d/1DPDtLQk_qg-oyCUTPVdgY1fc0M-NSIEA/view?usp=sharing',{responseType:'text'}).subscribe(res=>{
+      this.Reference = this.sanitizer.bypassSecurityTrustHtml(res);
+    })
   }
 
 }

@@ -43,14 +43,14 @@
   padding: 20px;
   background-color: teal;
   color: #fff;
-  list-style-type:none;
+
   
  }
  .nav-links a
   {
   color:white;
   
-  list-style-type:none; 
+
   text-decoration: none;
  }
  /* LOGO */
@@ -93,3 +93,32 @@ color:orange;
   position:absolute;
   width:100%;
 }
+.Login
+ {
+
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  margin:auto;
+  
+ }
+ .Login li a:hover 
+ {
+color:orange;
+  border-radius: 2px;
+  transition: 0.3s ease;
+ }
+ .Login li 
+ {
+
+  list-style-type:none;
+
+  margin:auto;
+ }
+ .Log a
+ {
+
+  text-decoration: none;
+  color:Green;
+  margin:auto;
+ }

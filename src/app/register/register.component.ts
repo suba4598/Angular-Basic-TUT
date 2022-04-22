@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl,Validators,FormBuilder} from '@angular/forms';
+import{MyserviceService}from '../service/myservice.service';
 
 @Component({
   selector: 'app-register',
@@ -14,10 +15,12 @@ export class RegisterComponent implements OnInit {
   username;
   password;
   emailPattern;
+  IsAdd:boolean=false;
+  AddMessage:string;
 
 
   IsClicked:boolean=false;
- constructor(private formbuilder: FormBuilder) { }
+ constructor(private formbuilder: FormBuilder,private myservice:MyserviceService) { }
 
   
   ngOnInit(): void 
@@ -58,10 +61,23 @@ export class RegisterComponent implements OnInit {
   {
   return;
   }
+//Insert method
+this.myservice.InsertRegister(data).subscribe(
+ ()=>{
+this.IsAdd = true;
+this.AddMessage='Registered Succesfully';
+ } 
+);
+
+
+
   this.Email=data.Email;
   this.MobileNo=data.MobileNo;
   this.username = data.username;
   this.password = data.password;
 
   }
+
+
+
 }

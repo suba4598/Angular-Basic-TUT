@@ -36,7 +36,15 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Knowledge Bucket</span>
+      <span>Angular Basic Tutorial</span>
+      <ul class="Log">
+      <div class="Login">
+       
+      <li><a  routerLink="/home">Logout</a></li>
+    
+    </div>
+  </ul>
+
     </mat-toolbar>
 
     <nav class="navbar">
@@ -45,7 +53,7 @@
      
       <ul class="nav-links">
          <div class="menu">
-          <li><a  routerLink="/home">Home</a></li>
+        
           <li><a  routerLink="/about">About</a></li>
           <li><a routerLink="/contact">Contact</a></li>
           <li><a routerLink="/pro">Pro</a></li>
@@ -57,7 +65,7 @@
   <Br>
  
    
-      <router-outlet></router-outlet> 
+
   </mat-sidenav-content>
 </mat-sidenav-container>
 

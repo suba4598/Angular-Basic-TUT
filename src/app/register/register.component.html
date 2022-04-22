@@ -16,8 +16,17 @@
       <p align="center" style="color:red" *ngIf=" IsClicked && Check.password.errors">Password must contain atleast one special charcter,number and uppercap</p><br>
      
       
-      <input type="submit" class="submit" value="Register"><br>
+     
+      <button type="submit" class="submit">Register</button> 
 
       
       </form>
+      
+<div class="Alert">
+      <p style="color:green;"  align="center" *ngIf="IsAdd">
+{{AddMessage}}
+      </p>
   </div>
+
+<div>
+

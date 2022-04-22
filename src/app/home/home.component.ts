@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl,Validators,FormBuilder} from '@angular/forms';
+import { Router } from '@angular/router';
+import { Interface } from 'readline';
+import{MyserviceService}from '../service/myservice.service';
 
 
 @Component({
@@ -10,18 +13,19 @@ import { FormGroup, FormControl,Validators,FormBuilder} from '@angular/forms';
 export class HomeComponent implements OnInit 
 {
 
-  RegisterForm;
+
+  LoginForm;
   username;
   password;
 
   IsClicked:boolean=false;
- constructor(private formbuilder: FormBuilder) { }
+ constructor(private formbuilder: FormBuilder,private myservice:MyserviceService,private router:Router) { }
 
   
   ngOnInit(): void 
   {
 
-    this.RegisterForm =new FormGroup
+    this.LoginForm =new FormGroup
     ({
 
     username:new FormControl("hai"),
@@ -29,7 +33,7 @@ export class HomeComponent implements OnInit
  
     })
  
-    this.RegisterForm=this.formbuilder.group
+    this.LoginForm=this.formbuilder.group
     
     ({
 
@@ -41,14 +45,16 @@ export class HomeComponent implements OnInit
 
   get Check() 
   {
-    return this.RegisterForm.controls;
+    return this.LoginForm.controls;
   }
 
-  OnRegisterClick(data)
+  OnLoginClick(data)
+  
   {
+    debugger;
   this.IsClicked = true;
   
-  if (this.RegisterForm.invalid)
+  if (this.LoginForm.invalid)
   
   {
   return;
@@ -57,7 +63,32 @@ export class HomeComponent implements OnInit
   this.username = data.username;
   this.password = data.password;
 
+  let ajson={}as Igetusername;
+  ajson=data;
+  debugger;
+  return this.myservice.Getlogindetailsbyusername(ajson).subscribe((data:any)=>{
+  //  this.User=data;
+  debugger;
+  if(data.message=="userfound")
+  {
+this.router.navigate(['./nav'])
   }
+  else{
+    alert("Invalid username or password")
+  }
+  });
+
+  }
+
+  //showdata event
+
+  
+
   
   }
   
+export interface Igetusername
+{
+username:string;
+password:string;
+}

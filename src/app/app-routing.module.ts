@@ -8,8 +8,14 @@ import { ProComponent } from './pro/pro.component';
 import { ApplicationComponent } from './application/application.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { RegisterComponent } from './register/register.component';
+import { NavComponent } from './nav/nav.component';
 
 const routes: Routes = [ 
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
   {path:"home",component:HomeComponent},
   {path:"about",component:AboutComponent},
   {path:"contact",component:ContactComponent},
@@ -17,6 +23,7 @@ const routes: Routes = [
   {path:"application",component:ApplicationComponent},
   {path:"workspace",component:WorkspaceComponent},
   {path:"register",component:RegisterComponent},
+  {path:"nav",component:NavComponent},
 
 
 ];
