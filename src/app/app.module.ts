@@ -22,7 +22,8 @@ import { ProComponent } from './pro/pro.component';
 import { ApplicationComponent } from './application/application.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { NoteComponent } from './note/note.component';
-import { RegisterComponent } from './register/register.component'
+import { RegisterComponent } from './register/register.component';
+import { WorkComponent } from './work/work.component'
 
 
 
@@ -39,6 +40,7 @@ import { RegisterComponent } from './register/register.component'
     WorkspaceComponent,
     NoteComponent,
     RegisterComponent,
+    WorkComponent,
     
     
     

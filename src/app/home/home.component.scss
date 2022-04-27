@@ -1,5 +1,5 @@
-body {
-    background-color: #F3EBF6;
+.body {
+    background-color: yellow;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -110,4 +110,23 @@ a {
 p
 {
     color:black;
+}
+.title {
+    text-align: center;
+    padding: 10px;
+    font-weight: 800;
+    color: transparent;
+    font-size: 120px;
+    background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+    background-position: 40% 50%;
+    -webkit-background-clip: text;
+    position: relative;
+    text-align: center;
+    line-height: 90px;
+    letter-spacing: -8px;
+}
+.down
+{
+text-align: center;
+color: violet;
 }
