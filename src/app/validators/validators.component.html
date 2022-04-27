@@ -1,0 +1,34 @@
+<p>Validators Implemented</p>
+
+<form [formGroup]="RegisterForm" (ngSubmit)="OnRegisterClick(RegisterForm.value)">
+
+<input type="text" name="EmpName" placeholder="Employee Name" formControlName = "EmpName"><br>
+<p *ngIf=" IsClicked && Check.EmpName.errors">Employee Name is Required </p><br>
+
+<input type="number" name="EmpAge" placeholder="Employee Age" formControlName ="EmpAge"><br>
+<p *ngIf=" IsClicked && Check.EmpAge.errors">Employee Age is Required </p><br>
+
+<input type="text" name="EmpDepartment" placeholder="Employee Department" formControlName ="EmpDepartment"><br>
+<p *ngIf=" IsClicked && Check.EmpDepartment.errors">Employee Department is Required </p><br>
+
+<input type="text" name="EmpAddress" placeholder="Employee Address" formControlName ="EmpAddress"><br>
+<p *ngIf=" IsClicked && Check.EmpAddress.errors">Employee Address is Required </p><br>
+
+<input type="text" name="EmpContact" placeholder="Employee Contact" formControlName ="EmpContact"><br><br>
+<p *ngIf=" IsClicked && Check.EmpContact.errors">Employee Contact is Required </p><br>
+
+<input type="submit" value="Create"><br>
+
+</form>
+
+
+
+<div class="data"> 
+
+<p>Employee Name :{{EmpName}}</p>
+<p>Employee Age :{{EmpAge}}</p>
+<p>Employee Department :{{EmpDepartment}}</p>
+<p>Employee Address :{{EmpAddress}}</p>
+<p>Employee Contact :{{EmpContact}}</p>
+
+<div>

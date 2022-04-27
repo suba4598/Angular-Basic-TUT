@@ -1,0 +1,27 @@
+<p>Current Date: {{DisplayDate | date:'shortDate'   }}</p>
+<h1>Fetching data from API</h1>
+
+<div class="table">
+
+    <table>
+    <tr>
+<th>name</th>
+<th>age</th>
+<th>count</th>
+
+
+
+
+</tr>
+<tr *ngFor="let i of PublicData">
+    
+    <td>{{ i.name }}</td>
+    <td>{{ i.age }}</td>
+    <td>{{ i.count }}</td>
+    
+    
+</tr>
+
+</table>
+
+</div>

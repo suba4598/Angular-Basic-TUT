@@ -1,0 +1,24 @@
+<p>REGISTER HERE!! </p>
+
+<form [formGroup]="RegisterForm" (ngSubmit)="OnRegisterClick(RegisterForm.value)">
+
+<input type="text" name="EmpName" placeholder="Employee Name" formControlName = "EmpName"><br>
+<input type="number" name="EmpAge" placeholder="Employee Age" formControlName ="EmpAge"><br>
+<input type="text" name="EmpDepartment" placeholder="Employee Department" formControlName ="EmpDepartment"><br>
+<input type="text" name="EmpAddress" placeholder="Employee Address" formControlName ="EmpAddress"><br>
+<input type="text" name="EmpContact" placeholder="Employee Contact" formControlName ="EmpContact"><br><br>
+<input type="submit" value="Create"><br>
+
+</form>
+
+
+
+<div>
+
+<p>Employee Name :{{EmpName}}</p>
+<p>Employee Age :{{EmpAge}}</p>
+<p>Employee Department :{{EmpDepartment}}</p>
+<p>Employee Address :{{EmpAddress}}</p>
+<p>Employee Contact :{{EmpContact}}</p>
+
+<div>

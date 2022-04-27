@@ -1,0 +1,39 @@
+
+<div class="mon">
+    <label for="color">Select Month</label>
+    <select>
+    
+    <option value="select">--select--</option>
+    <option *ngFor="let  i of month">{{i}}</option>
+   
+</select>
+</div><br>
+<div>
+    <span *ngIf="isavailable; then condition1 else condition2">Condition is valid.</span>
+    <ng-template #condition1>condition 1 is invalid</ng-template>
+    <ng-template #condition2>condition 2 is invalid</ng-template>
+</div>
+
+<div class="table">
+
+    <table>
+    <tr>
+<th>Name</th>
+<th>Email</th>
+<th>Mobile</th>
+
+</tr>
+<tr *ngFor="let i of Emp ">
+    
+    <td>{{ i.Name }}</td>
+    <td>{{ i.Email }}</td>
+    <td>{{ i.Mobile }}</td>
+    
+</tr>
+
+</table>
+
+</div>
+
+
+

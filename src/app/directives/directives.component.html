@@ -1,0 +1,36 @@
+<div [ngClass] ="{'one':Level==5}">
+    <p>{{content}}</p>
+    </div>
+    <div class="two">
+    <p>Welcome to class two</p>
+    </div>
+    <div [ngClass] ="DisplayError()">
+    <p>Welcome to class three</p>
+    </div>
+    <div [ngStyle]="{'background-color':Level===5?'green':'red'}">
+        <p>This should be highlightened</p>
+    
+    </div>
+    
+    <div [ngSwitch]="Level">
+        
+        <div *ngSwitchCase="1">
+            <p>This is div one</p>
+        </div>
+    
+        <div *ngSwitchCase="2">
+            <p>This is div two</p>
+        </div>
+        
+        <div *ngSwitchCase="3"> 
+            <p>This is div three</p>
+        </div>
+        
+        <div *ngSwitchCase="4">
+            <p>This is div four</p>
+        </div>
+        
+        <div *ngSwitchCase="5">
+            <p>This is div five</p>
+        </div>
+    </div>

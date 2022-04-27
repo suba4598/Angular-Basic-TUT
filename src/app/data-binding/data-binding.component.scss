@@ -1,0 +1,37 @@
+table
+{
+border:2px solid green;
+border-collapse:collapse;
+
+}
+tr,td,th
+{
+padding: 10px;
+border:2px solid green;
+color:yellow;
+
+
+}
+.table
+
+{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    margin:100px auto;
+}
+.main
+
+
+{
+width: 900px;
+height: 500px;
+border: none;
+outline: none;
+box-shadow: inset 6px 6px 6px lightgreen,
+                6px 6px 6px lightblue;
+                justify-content:center;
+                align-items:center;
+                display:flex;
+                background-color: black;
+}

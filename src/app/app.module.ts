@@ -23,8 +23,18 @@ import { ApplicationComponent } from './application/application.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { NoteComponent } from './note/note.component';
 import { RegisterComponent } from './register/register.component';
-import { WorkComponent } from './work/work.component'
-
+import { WorkComponent } from './work/work.component';
+import { ValidatorsComponent } from './validators/validators.component';
+import { ServiceAPIComponent } from './service-api/service-api.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { SqrtPipe } from './pipes/sqrt custom pipe';
+import { AdminComponent } from './admin/admin.component';
+import { PalindromeComponent } from './palindrome/palindrome.component';
+import { MDFComponent } from './mdf/mdf.component';
+import { LoginComponent } from './login/login.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 
 
@@ -41,6 +51,18 @@ import { WorkComponent } from './work/work.component'
     NoteComponent,
     RegisterComponent,
     WorkComponent,
+    ValidatorsComponent,
+    ServiceAPIComponent,
+    PipesComponent,
+    SqrtPipe,
+    AdminComponent,
+    PalindromeComponent,
+    MDFComponent,
+    LoginComponent,
+    EventBindingComponent,
+    DirectivesComponent,
+    DataBindingComponent
+    
     
     
     

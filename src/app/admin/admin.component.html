@@ -1,0 +1,30 @@
+
+
+<div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th style="display: none;">ID </th>
+          <th>Email </th>
+          <th>MobileNo </th>
+          <th>username </th>
+          <th>password </th>
+          <th><input class = "showdata" type="button" value="ShowData" (click)="Onshowclick(User)" ></th>
+       
+        </tr>
+      </thead>
+     
+      <tbody>
+
+            <tr *ngFor="let i of User">
+            <td style="display: none;"> {{ i._id }}</td>
+          <td>{{ i.Email }}</td>
+          <td>{{ i.MobileNo }}</td>
+          <td>{{ i.username }}</td>
+          <td>{{ i.password }}</td>
+          <td><input class = "showdata" type="button" value="Delete" (click)="OnDeleteUser(i._id)" ></td>
+          <td><input class = "showdata" type="button" value="Update" (click)="OnUpdateUser(i)" ></td>
+       
+        </tr>
+    </tbody>
+  
